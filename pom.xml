@@ -19,8 +19,8 @@
         <spring.test>5.1.0.RELEASE</spring.test>
         <junit.version>4.12</junit.version>
         <jstl.version>1.2</jstl.version>
-        <hiber.jpa>1.0.1.Final</hiber.jpa>
-        <slf4j-version>1.70.10</slf4j-version>
+        <hiber.jpa>1.0.2.Final</hiber.jpa>
+        <slf4j-version>1.8.0-beta2</slf4j-version>
         <log4j-version>1.2.17</log4j-version>
     </properties>
 
@@ -116,7 +116,7 @@
 
         <dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
             <version>${hiber.jpa}</version>
         </dependency>
 
@@ -138,6 +138,7 @@
             <version>${slf4j-version}</version>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -162,7 +163,6 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
-
     </dependencies>
 
     <build>

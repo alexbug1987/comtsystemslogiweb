@@ -1,8 +1,6 @@
 package com.tsystems.logiweb.controller;
 
-import com.tsystems.logiweb.service.DriverService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,17 +13,16 @@ public class HelloController {
     @RequestMapping(method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
 
-        model.addAttribute("msg", "Spring MVC - Hello Controller");
+        model.addAttribute("message", "Spring 3 MVC - Hello World");
         return "hello";
 
     }
 
-}
 
-    /* @Autowired
+  /* @Autowired
     ApplicationContext context;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String index(ModelMap map) {
         DriverService bean = context.getBean(DriverService.class);
         StringBuilder sb = new StringBuilder("<br>");
@@ -34,6 +31,6 @@ public class HelloController {
         return "hello";
     }*/
 
-
+}
 
 

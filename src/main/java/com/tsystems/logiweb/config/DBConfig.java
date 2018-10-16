@@ -10,14 +10,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-/*@Configuration
+@Configuration
 @EnableTransactionManagement
 @ComponentScan("com.tsystems.logiweb")
 @PropertySource("classpath:app.properties")
@@ -74,9 +73,9 @@ public class DBConfig {
         properties.put(PROP_HIBERNATE_HBM2DDL_AUTO, env.getRequiredProperty(PROP_HIBERNATE_HBM2DDL_AUTO));
 
         return properties;
-    }*/
+    }
 
-@Configuration
+/*@Configuration
 @ComponentScan("com.tsystems.logiweb")
 @EnableJpaRepositories
 public class DBConfig {
@@ -108,7 +107,60 @@ public class DBConfig {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return transactionManager;
+    }*/
+
+/*@Configuration
+@ComponentScan(basePackages={"com.tsystems.logiweb.service","com.tsystems.logiweb.entity"})
+@EnableTransactionManagement
+public class DBConfig{
+
+
+    @Bean
+    public DriverManagerDataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/logiweb");
+        dataSource.setUsername("bugaevaf");
+        dataSource.setPassword("azm18_18653322");
+        return dataSource;
     }
+
+
+    @Bean
+    @Autowired
+    public PlatformTransactionManager getTransactionManager(EntityManagerFactory emf) throws NamingException {
+
+        JpaTransactionManager jpaTransaction = new JpaTransactionManager();
+        jpaTransaction.setEntityManagerFactory(emf);
+
+        return jpaTransaction;
+    }
+
+    @Bean
+    public LocalContainerEntityManagerFactoryBean getEMF() {
+
+        LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
+        emf.setDataSource(getDataSource());
+        emf.setPersistenceUnitName("spring-jpa-unit");
+        emf.setJpaVendorAdapter(getHibernateAdapter());
+        Properties jpaProperties = new Properties();
+        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        jpaProperties.put("hibernate.hbm2ddl.auto", "update");
+        jpaProperties.put("hibernate.show_sql", "true");
+        jpaProperties.put("hibernate.format_sql","false");
+
+
+
+        emf.setJpaProperties(jpaProperties);
+
+        return emf;
+    }
+
+    @Bean
+    public JpaVendorAdapter getHibernateAdapter() {
+        HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
+        return hibernateJpaVendorAdapter;
+    }*/
 }
 
 

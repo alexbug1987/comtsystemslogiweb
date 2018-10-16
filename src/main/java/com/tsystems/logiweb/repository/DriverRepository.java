@@ -10,5 +10,4 @@ public interface DriverRepository extends JpaRepository<Driver, Integer>{
     Driver findByName(@Param("name") String name);
 
 
-    void delete(int id);
 }

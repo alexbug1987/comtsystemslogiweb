@@ -22,7 +22,7 @@ public class Driver {
     private String sirname;
 
     @Column(name = "PersonalNumber", nullable = false)
-    private int personalNumber;
+    private String personalNumber;
 
     @Column(name = "WorkingHoursThisMonth", nullable = false)
     private short workingHoursThisMonth;
@@ -66,11 +66,11 @@ public class Driver {
         this.sirname = sirname;
     }
 
-    public int getPersonalNumber() {
+    public String getPersonalNumber() {
         return personalNumber;
     }
 
-    public void setPersonalNumber(int personalNumber) {
+    public void setPersonalNumber(String personalNumber) {
         this.personalNumber = personalNumber;
     }
 
@@ -106,7 +106,7 @@ public class Driver {
         this.driverTruck = driverTruck;
     }
 
-    public Driver(String name, String sirname, int personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry, Truck driverTruck) {
+    public Driver(String name, String sirname, String personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry, Truck driverTruck) {
         this.name = name;
         this.sirname = sirname;
         this.personalNumber = personalNumber;
@@ -116,7 +116,7 @@ public class Driver {
         this.driverTruck = driverTruck;
     }
 
-    public Driver(String name, String sirname, int personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry) {
+    public Driver(String name, String sirname, String personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry) {
         this.name = name;
         this.sirname = sirname;
         this.personalNumber = personalNumber;

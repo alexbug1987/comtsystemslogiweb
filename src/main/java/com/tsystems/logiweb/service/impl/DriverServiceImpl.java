@@ -13,17 +13,18 @@ public class DriverServiceImpl implements DriverService {
     @Autowired
     private DriverRepository driverRepository;
 
+
     @Override
     public Driver addDriver(Driver driver) {
 
         return driverRepository.saveAndFlush(driver);
     }
-
-   // @Override
-/*    public void delete(int id) {
+/*
+    @Override
+    public void delete(int id) {
         driverRepository.delete(id);
-    }
-    */
+    }*/
+
     @Override
     public Driver getByName(String name) {
         return driverRepository.findByName(name);
