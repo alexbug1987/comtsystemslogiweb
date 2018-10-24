@@ -54,6 +54,7 @@
 			<th>label.personalNumber</th>
 			<th>label.workingHoursThisMonth</th>
             <th>label.status</th>
+            <th>label.status</th>
 			<th>&nbsp;</th>
 		</tr>
 		<c:forEach items="${driverList}" var="driver">
@@ -63,6 +64,7 @@
 				<td>${driver.personalNumber}</td>
 				<td>${driver.workingHoursThisMonth}</td>
                 <td>${driver.driverStatus}</td>
+                <td>${driver.driverCountry.city}</td>
 				<td><a href="delete/${driver.driverId}">label.delete</a></td>
 			</tr>
 		</c:forEach>

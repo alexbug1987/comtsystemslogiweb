@@ -23,24 +23,24 @@ public class CountryMap {
     @Column(name = "YPosition", nullable = false)
     private int yPosition;
 
-    // к свяи с фурами
+   /* // к свяи с фурами
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "countryTruck")
     private Set<Truck> trucks;
 
-/*    // к свяи с водителеми
+    // к свяи с водителеми
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "driverCountry")
-    private Set<Driver> drivers;*/
+    private Set<Driver> drivers;
 
     // к свяи с с заказами
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "cityOfLoadingOrder")
     private Set<Order> ordersLoad;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "cityOfDischargeOrder")
-    private Set<Order> ordersDischarge;
+    private Set<Order> ordersDischarge;*/
 
 
     //get-set
-
+/*
     public Set<Order> getOrdersLoad() {
         return ordersLoad;
     }
@@ -65,7 +65,7 @@ public class CountryMap {
         this.trucks = trucks;
     }
 
-/*    public Set<Driver> getDrivers() {
+    public Set<Driver> getDrivers() {
         return drivers;
     }
 

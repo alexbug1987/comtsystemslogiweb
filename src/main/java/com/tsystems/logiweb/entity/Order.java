@@ -34,13 +34,14 @@ public class Order {
     @JoinColumn(name = "CityOfLoadingID", nullable = false)
     private CountryMap cityOfLoadingOrder;
 
+    //связь с городом разгрузки
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "CityOfDischargeID", nullable = false)
     private CountryMap cityOfDischargeOrder;
 
     //связь с текущей фурой
-    @OneToOne(optional = false)
-    @JoinColumn(name="AppointedTruckID", unique = true, nullable = false, updatable = false)
+    @OneToOne
+    @JoinColumn(name="AppointedTruckID")
     private Truck truck;
 
     public int getOrderId() {
@@ -106,7 +107,7 @@ public class Order {
     public void setTruck(Truck truck) {
         this.truck = truck;
     }
-
+/*
     public Order(int orderNumber, OrderStatus orderStatus, int weight, Date deadlineForDelivery, CountryMap cityOfLoadingOrder, CountryMap cityOfDischargeOrder) {
         this.orderNumber = orderNumber;
         this.orderStatus = orderStatus;
@@ -124,7 +125,7 @@ public class Order {
         this.cityOfLoadingOrder = cityOfLoadingOrder;
         this.cityOfDischargeOrder = cityOfDischargeOrder;
         this.truck = truck;
-    }
+    }*/
 
     public Order() {
 
