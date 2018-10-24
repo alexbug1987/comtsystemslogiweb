@@ -125,4 +125,8 @@ public class Order {
         this.cityOfDischargeOrder = cityOfDischargeOrder;
         this.truck = truck;
     }
+
+    public Order() {
+
+    }
 }

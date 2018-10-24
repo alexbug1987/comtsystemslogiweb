@@ -1,6 +1,8 @@
 package com.tsystems.logiweb.config;
 
+
 import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,19 +11,24 @@ import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.annotation.Resource;
+import javax.naming.NamingException;
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.tsystems.logiweb")
-@PropertySource("classpath:app.properties")
+//@PropertySource("classpath:app.properties")
 @EnableJpaRepositories("com.tsystems.logiweb.repository")
-public class DBConfig {
+/*public class DBConfig {
 
     private static final String PROP_DATABASE_DRIVER = "db.driver";
     private static final String PROP_DATABASE_PASSWORD = "db.password";
@@ -73,17 +80,15 @@ public class DBConfig {
         properties.put(PROP_HIBERNATE_HBM2DDL_AUTO, env.getRequiredProperty(PROP_HIBERNATE_HBM2DDL_AUTO));
 
         return properties;
-    }
+    }*/
+//_____________________________________________________________________
 
-/*@Configuration
-@ComponentScan("com.tsystems.logiweb")
-@EnableJpaRepositories
 public class DBConfig {
     @Bean
     DriverManagerDataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/logiweb");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/logiweb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
         dataSource.setUsername("bugaevaf");
         dataSource.setPassword("azm18_18653322");
         return dataSource;
@@ -107,24 +112,20 @@ public class DBConfig {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
         return transactionManager;
-    }*/
-
-/*@Configuration
-@ComponentScan(basePackages={"com.tsystems.logiweb.service","com.tsystems.logiweb.entity"})
-@EnableTransactionManagement
-public class DBConfig{
+    }
+//_______________________________________________
+/*public class DBConfig{
 
 
     @Bean
     public DriverManagerDataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/logiweb");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/logiweb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
         dataSource.setUsername("bugaevaf");
         dataSource.setPassword("azm18_18653322");
         return dataSource;
     }
-
 
     @Bean
     @Autowired

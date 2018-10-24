@@ -31,16 +31,16 @@ public class Driver {
     @Enumerated(EnumType.STRING)
     private DriverStatus driverStatus;
 
-    //связь с текущим городом
+/*    //связь с текущим городом
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "CurrentCityID", nullable = false)
-    private CountryMap driverCountry;
+    private CountryMap driverCountry;*/
 
-    //связь с текущей фурой
+/*    //связь с текущей фурой
     @OneToOne(optional = false)
     @JoinColumn(name = "CurrentTruckID", unique = true, nullable = false, updatable = false)
-    private Truck driverTruck;
+    private Truck driverTruck;*/
 
     public int getDriverId() {
         return driverId;
@@ -90,15 +90,15 @@ public class Driver {
         this.driverStatus = driverStatus;
     }
 
-    public CountryMap getDriverCountry() {
+/*    public CountryMap getDriverCountry() {
         return driverCountry;
     }
 
     public void setDriverCountry(CountryMap driverCountry) {
         this.driverCountry = driverCountry;
-    }
+    }*/
 
-    public Truck getDriverTruck() {
+ /*   public Truck getDriverTruck() {
         return driverTruck;
     }
 
@@ -125,6 +125,9 @@ public class Driver {
         this.driverCountry = driverCountry;
     }
 
+    public Driver() {
+    }
+
     @Override
     public String toString() {
         return "Driver{" +
@@ -134,8 +137,8 @@ public class Driver {
                 ", personalNumber=" + personalNumber +
                 ", workingHoursThisMonth=" + workingHoursThisMonth +
                 ", driverStatus=" + driverStatus +
-                ", driverCountry=" + driverCountry +
-                ", driverTruck=" + driverTruck +
+              //  ", driverCountry=" + driverCountry +
+               // ", driverTruck=" + driverTruck +
                 '}';
-    }
+    }*/
 }

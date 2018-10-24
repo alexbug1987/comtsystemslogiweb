@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+
+
 @Service
 public class DriverServiceImpl implements DriverService {
 
@@ -19,11 +21,11 @@ public class DriverServiceImpl implements DriverService {
 
         return driverRepository.saveAndFlush(driver);
     }
-/*
     @Override
     public void delete(int id) {
-        driverRepository.delete(id);
-    }*/
+        driverRepository.deleteById(id);
+    }
+
 
     @Override
     public Driver getByName(String name) {
@@ -37,6 +39,6 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public List<Driver> getAll() {
-        return driverRepository.findAll();
+               return driverRepository.findAll();
     }
 }

@@ -6,6 +6,6 @@ public enum DriverStatus{
     LOADING,
     UNLOADING;
 
-    DriverStatus(){
+    DriverStatus() {
     }
 }

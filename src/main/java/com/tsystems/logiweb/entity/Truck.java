@@ -33,9 +33,9 @@ public class Truck {
     @JoinColumn(name = "CurrentCityID", nullable = false)
     private CountryMap countryTruck;
 
-    // к свяи с с водителем
+   /* // к свяи с с водителем
     @OneToOne(optional = false, mappedBy="driverTruck")
-    private Driver driver;
+    private Driver driver;*/
 
     // к свяи с с заказом
     @OneToOne(optional = false, mappedBy="truck")
@@ -89,13 +89,13 @@ public class Truck {
         this.countryTruck = countryTruck;
     }
 
-    public Driver getDriver() {
+/*    public Driver getDriver() {
         return driver;
     }
 
     public void setDriver(Driver driver) {
         this.driver = driver;
-    }
+    }*/
 
     public Order getOrder() {
         return order;
@@ -113,12 +113,16 @@ public class Truck {
         this.countryTruck = countryTruck;
     }
 
-    public Truck(String registrationNumber, int capacity, TruckStatus truckStatus, int averageSpeed, CountryMap countryTruck, Driver driver) {
+ /*   public Truck(String registrationNumber, int capacity, TruckStatus truckStatus, int averageSpeed, CountryMap countryTruck, Driver driver) {
         this.registrationNumber = registrationNumber;
         this.capacity = capacity;
         this.truckStatus = truckStatus;
         this.averageSpeed = averageSpeed;
         this.countryTruck = countryTruck;
         this.driver = driver;
+    }
+*/
+    public Truck() {
+
     }
 }

@@ -27,9 +27,9 @@ public class CountryMap {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "countryTruck")
     private Set<Truck> trucks;
 
-    // к свяи с водителеми
+/*    // к свяи с водителеми
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "driverCountry")
-    private Set<Driver> drivers;
+    private Set<Driver> drivers;*/
 
     // к свяи с с заказами
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "cityOfLoadingOrder")
@@ -65,13 +65,13 @@ public class CountryMap {
         this.trucks = trucks;
     }
 
-    public Set<Driver> getDrivers() {
+/*    public Set<Driver> getDrivers() {
         return drivers;
     }
 
     public void setDrivers(Set<Driver> drivers) {
         this.drivers = drivers;
-    }
+    }*/
 
     public int getCityId() {
         return cityId;
@@ -110,8 +110,9 @@ public class CountryMap {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
     }
-    public CountryMap(String city) {
-        this.city = city;
+
+    public CountryMap() {
+
     }
 
 }

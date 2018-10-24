@@ -9,7 +9,8 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
         return new Class<?>[]{
 
                // WebConfig.class,
-                DBConfig.class
+                DBConfig.class,
+                SecurityConfig.class
         };
     }
 
