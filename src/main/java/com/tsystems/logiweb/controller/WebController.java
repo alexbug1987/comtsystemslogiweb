@@ -6,9 +6,7 @@ import com.tsystems.logiweb.service.DriverService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,29 +19,6 @@ import java.util.Map;
 //@RequestMapping("/welcome")
 public class WebController {
     private final Logger logger = LoggerFactory.getLogger(WebController.class);
-
-
-/*    @RequestMapping(method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
-
-        model.addAttribute("msg", "Spring 3 MVC - Hello World");
-        return "hello";
-
-    }*/
-
-
-/*   @Autowired
-   ApplicationContext context;
-
-    //@RequestMapping(value = "/welcome", method = RequestMethod.GET)
-    @RequestMapping(method = RequestMethod.GET)
-    public String index(ModelMap map) {
-        DriverService bean = context.getBean(DriverService.class);
-        StringBuilder sb = new StringBuilder("<br>");
-        bean.getAll().forEach(it->sb.append(it.toString()).append("<br>"));
-        map.put("msg", sb.toString());
-        return "hello";
-    }*/
 
     @Autowired
     private DriverService driverService;

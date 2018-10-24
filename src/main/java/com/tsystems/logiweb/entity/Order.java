@@ -107,27 +107,5 @@ public class Order {
     public void setTruck(Truck truck) {
         this.truck = truck;
     }
-/*
-    public Order(int orderNumber, OrderStatus orderStatus, int weight, Date deadlineForDelivery, CountryMap cityOfLoadingOrder, CountryMap cityOfDischargeOrder) {
-        this.orderNumber = orderNumber;
-        this.orderStatus = orderStatus;
-        this.weight = weight;
-        this.deadlineForDelivery = deadlineForDelivery;
-        this.cityOfLoadingOrder = cityOfLoadingOrder;
-        this.cityOfDischargeOrder = cityOfDischargeOrder;
-    }
 
-    public Order(int orderNumber, OrderStatus orderStatus, int weight, Date deadlineForDelivery, CountryMap cityOfLoadingOrder, CountryMap cityOfDischargeOrder, Truck truck) {
-        this.orderNumber = orderNumber;
-        this.orderStatus = orderStatus;
-        this.weight = weight;
-        this.deadlineForDelivery = deadlineForDelivery;
-        this.cityOfLoadingOrder = cityOfLoadingOrder;
-        this.cityOfDischargeOrder = cityOfDischargeOrder;
-        this.truck = truck;
-    }*/
-
-    public Order() {
-
-    }
 }

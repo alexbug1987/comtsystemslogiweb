@@ -14,7 +14,6 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan("com.tsystems.logiweb.controller")
 @EnableWebMvc
 @EnableJpaRepositories
-//@Import({DBConfig.class})
 public class WebConfig implements WebMvcConfigurer {
 
 

@@ -94,33 +94,4 @@ public class Truck {
         this.driver = driver;
     }
 
-/*    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }*/
-/*
-    public Truck(String registrationNumber, int capacity, TruckStatus truckStatus, int averageSpeed, CountryMap countryTruck) {
-        this.registrationNumber = registrationNumber;
-        this.capacity = capacity;
-        this.truckStatus = truckStatus;
-        this.averageSpeed = averageSpeed;
-        this.countryTruck = countryTruck;
-    }
-*/
-
- /*   public Truck(String registrationNumber, int capacity, TruckStatus truckStatus, int averageSpeed, CountryMap countryTruck, Driver driver) {
-        this.registrationNumber = registrationNumber;
-        this.capacity = capacity;
-        this.truckStatus = truckStatus;
-        this.averageSpeed = averageSpeed;
-        this.countryTruck = countryTruck;
-        this.driver = driver;
-    }
-*/
-    public Truck() {
-
-    }
 }

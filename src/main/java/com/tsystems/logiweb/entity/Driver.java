@@ -32,14 +32,13 @@ public class Driver {
     private DriverStatus driverStatus;
 
     //связь с текущим городом
-
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "CurrentCityID", nullable = false)
     private CountryMap driverCountry;
 
     //связь с текущей фурой
     @OneToOne(optional = false)
-    @JoinColumn(name = "CurrentTruckID", unique = true, nullable = false, updatable = false)
+    @JoinColumn(name = "CurrentTruckID", unique = true, updatable = false)
     private Truck driverTruck;
 
     public int getDriverId() {
@@ -105,40 +104,5 @@ public class Driver {
     public void setDriverTruck(Truck driverTruck) {
         this.driverTruck = driverTruck;
     }
-/*
-    public Driver(String name, String sirname, String personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry, Truck driverTruck) {
-        this.name = name;
-        this.sirname = sirname;
-        this.personalNumber = personalNumber;
-        this.workingHoursThisMonth = workingHoursThisMonth;
-        this.driverStatus = driverStatus;
-        this.driverCountry = driverCountry;
-        this.driverTruck = driverTruck;
-    }
 
-    public Driver(String name, String sirname, String personalNumber, short workingHoursThisMonth, DriverStatus driverStatus, CountryMap driverCountry) {
-        this.name = name;
-        this.sirname = sirname;
-        this.personalNumber = personalNumber;
-        this.workingHoursThisMonth = workingHoursThisMonth;
-        this.driverStatus = driverStatus;
-        this.driverCountry = driverCountry;
-    }
-
-    public Driver() {
-    }
-
-    @Override
-    public String toString() {
-        return "Driver{" +
-                "driverId=" + driverId +
-                ", name='" + name + '\'' +
-                ", sirname='" + sirname + '\'' +
-                ", personalNumber=" + personalNumber +
-                ", workingHoursThisMonth=" + workingHoursThisMonth +
-                ", driverStatus=" + driverStatus +
-              //  ", driverCountry=" + driverCountry +
-               // ", driverTruck=" + driverTruck +
-                '}';
-    }*/
 }

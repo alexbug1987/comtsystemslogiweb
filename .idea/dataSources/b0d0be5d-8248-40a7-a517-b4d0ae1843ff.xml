@@ -985,7 +985,7 @@
     </column>
     <column id="245" parent="233" name="PersonalNumber">
       <Position>4</Position>
-      <DataType>int(10)|0s</DataType>
+      <DataType>char(15)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
@@ -999,9 +999,9 @@
     </column>
     <column id="247" parent="233" name="DriverStatus">
       <Position>6</Position>
-      <DataType>enum(&apos;rest&apos;, &apos;work&apos;, &apos;loading&apos;, &apos;unloading&apos;)|0e</DataType>
+      <DataType>enum(&apos;REST&apos;, &apos;WORK&apos;, &apos;LOADING&apos;, &apos;UNLOADING&apos;)|0e</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;rest&apos;</DefaultExpression>
+      <DefaultExpression>&apos;REST&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="248" parent="233" name="CurrentCityID">
@@ -1055,9 +1055,9 @@
     </column>
     <column id="257" parent="234" name="OrderStatus">
       <Position>3</Position>
-      <DataType>enum(&apos;new&apos;, &apos;accepted for execution&apos;, &apos;loaded&apos;, &apos;executed&apos;, &apos;canceled&apos;)|0e</DataType>
+      <DataType>enum(&apos;NEW&apos;, &apos;ACCEPTED_FOR_EXECUTION&apos;, &apos;LOADED&apos;, &apos;EXECUTED&apos;, &apos;CANCELED&apos;)|0e</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;new&apos;</DefaultExpression>
+      <DefaultExpression>&apos;NEW&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="258" parent="234" name="Weight">
@@ -1149,9 +1149,9 @@
     </column>
     <column id="273" parent="235" name="VehicleStatus">
       <Position>4</Position>
-      <DataType>enum(&apos;serviceable&apos;, &apos;notserviceable&apos;)|0e</DataType>
+      <DataType>enum(&apos;SERVICEABLE&apos;, &apos;NOTSERVICEABLE&apos;)|0e</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;serviceable&apos;</DefaultExpression>
+      <DefaultExpression>&apos;SERVICEABLE&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="274" parent="235" name="CurrentCityID">

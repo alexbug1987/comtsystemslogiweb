@@ -8,53 +8,56 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
 	<link rel="stylesheet" type="text/css" href="../../resources/styleContact.css">
-	<title>Simple</title>
+	<title>Tsystems Logiweb</title>
 </head>
 <body>
 
-<a href="<c:url value="/logout" />">kjgghjghjg
-</a>
-
-<h2>label.title</h2>
+<a href="<c:url value="/logout" />">LOGOUT </a>
+<h2>Add Driver</h2>
 
 	<th><form:form method="post" action="add" modelAttribute="driver">
 			<table>
 				<tr>
-					<td><form:label path="name"> label.name
+					<td><form:label path="name"> Name
 					</form:label></td>
 					<td><form:input path="name" /></td>
 				</tr>
 				<tr>
-					<td><form:label path="sirname"> label.sirname
+					<td><form:label path="sirname"> Sirname
 					</form:label></td>
 					<td><form:input path="sirname" /></td>
 				</tr>
 				<tr>
-					<td><form:label path="personalNumber"> label.personalNumber
+					<td><form:label path="personalNumber"> PersonalNumber
 					</form:label></td>
 					<td><form:input path="personalNumber" /></td>
 				</tr>
 				<tr>
-					<td><form:label path="workingHoursThisMonth"> label.workingHoursThisMonth
+					<td><form:label path="workingHoursThisMonth"> WorkingHoursThisMonth
 					</form:label></td>
 					<td><form:input path="workingHoursThisMonth" /></td>
 				</tr>
+                <tr>
+                    <td><form:label path="driverStatus"> DriverStatus
+                    </form:label></td>
+                    <td><form:input path="driverStatus" /></td>
+                </tr>
 				<tr>
-					<td colspan="2"><input type="submit" value=label.adddriver /></td>
+					<td colspan="2"><input type="submit" value="Add Driver"/></td>
 				</tr>
 			</table>
 		</form:form></th>
 
-<h3>label.drivers</h3>
+<h3>Drivers List</h3>
 <c:if test="${!empty driverList}">
 	<table class="data">
 		<tr class="simple">
-			<th>label.name</th>
-			<th>label.sirname</th>
-			<th>label.personalNumber</th>
-			<th>label.workingHoursThisMonth</th>
-            <th>label.status</th>
-            <th>label.status</th>
+			<th>Name</th>
+			<th>Sirname</th>
+			<th>PersonalNumber</th>
+			<th>WorkingHoursThisMonth</th>
+            <th>Status</th>
+            <th>City</th>
 			<th>&nbsp;</th>
 		</tr>
 		<c:forEach items="${driverList}" var="driver">
@@ -65,11 +68,11 @@
 				<td>${driver.workingHoursThisMonth}</td>
                 <td>${driver.driverStatus}</td>
                 <td>${driver.driverCountry.city}</td>
-				<td><a href="delete/${driver.driverId}">label.delete</a></td>
+				<td><a href="welcome/delete/${driver.driverId}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	</table>
 </c:if>
-<script src="../../resources/jquery-3.3.1.js"></script>
+<%--<script src="../../resources/jquery-3.3.1.js"></script>--%>
 </body>
 </html>
