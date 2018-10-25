@@ -37,7 +37,7 @@ public class WebController {
     }
 
     @RequestMapping(value = "/welcome/adddriver", method = RequestMethod.POST)
-    public String addDriver(@ModelAttribute("driver") Driver driver, BindingResult result) {
+    public String addDriver(@ModelAttribute("adddriver") Driver driver, BindingResult result) {
 
         driverService.addDriver(driver);
         logger.debug("addDriver()");

@@ -23,7 +23,7 @@
 
 	<spring:url value="/users" var="userActionUrl" />
 
-	<form:form class="form-horizontal" method="post" modelAttribute="driver" action="${userActionUrl}">
+	<form:form class="form-horizontal" method="post" modelAttribute="adddriver" action="${userActionUrl}">
 
 		<form:hidden path="id" />
 
