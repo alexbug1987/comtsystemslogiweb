@@ -30,7 +30,6 @@ public class DriverServiceImpl implements DriverService {
         driverRepository.deleteById(id);
     }
 
-
     @Override
     public Driver getByName(String name) {
         return driverRepository.findByName(name);

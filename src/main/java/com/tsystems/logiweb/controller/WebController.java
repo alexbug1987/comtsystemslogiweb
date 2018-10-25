@@ -26,11 +26,11 @@ public class WebController {
 
     @RequestMapping("/welcome")
     public String listDriver(Map<String, Object> map) {
-
         map.put("driverList", driverService.getAll());
         logger.debug("listDriver()");
         return "driver";
     }
+
     @RequestMapping("/")
     public String home() {
         return "redirect:/welcome";
@@ -40,7 +40,7 @@ public class WebController {
     public String addDriver(@ModelAttribute("adddriver") Driver driver, BindingResult result) {
 
         driverService.addDriver(driver);
-        logger.debug("addDriver()");
+        logger.debug("addDriver(driver)");
         return "redirect:/welcome";
     }
 
@@ -48,7 +48,7 @@ public class WebController {
     public String deleteDriver(@PathVariable("driverId") Integer driverId) {
 
         driverService.delete(driverId);
-        logger.debug("deleteDriver()");
+        logger.debug("deleteDriver(driverId)");
         return "redirect:/welcome";
     }
 

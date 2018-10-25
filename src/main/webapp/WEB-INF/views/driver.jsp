@@ -38,7 +38,7 @@
                <%-- <td>${driver.driverCountry.city}</td>--%>
 				<%--<td><a href="delete/${driver.driverId}">Delete</a></td>--%>
                 <td>
-                    <spring:url value="/welcome/${driver.driverId}" var="detailUrl" />
+                    <spring:url value="/welcome/${driver.name}" var="detailUrl" />
                     <spring:url value="/welcome/delete/${driver.driverId}" var="deleteUrl" />
                     <spring:url value="/welcome/update/${driver.driverId}" var="updateUrl" />
 
