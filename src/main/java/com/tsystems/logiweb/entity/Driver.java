@@ -33,7 +33,8 @@ public class Driver {
 
     //связь с текущим городом
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "CurrentCityID", nullable = false)
+    @JoinColumn(name = "CurrentCityID")
+   // @JoinColumn(name = "CurrentCityID", nullable = false)
     private CountryMap driverCountry;
 
     //связь с текущей фурой
