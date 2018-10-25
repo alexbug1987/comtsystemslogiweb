@@ -13,44 +13,7 @@
 <body>
 <jsp:include page="fragments/header.jsp" />
 
-
-<%--<h2>Add Driver</h2>
-
-	<th><form:form method="post" action="add" modelAttribute="driver">
-			<table>
-				<tr>
-					<td><form:label path="name"> Name
-					</form:label></td>
-					<td><form:input path="name" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="sirname"> Sirname
-					</form:label></td>
-					<td><form:input path="sirname" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="personalNumber"> PersonalNumber
-					</form:label></td>
-					<td><form:input path="personalNumber" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="workingHoursThisMonth"> WorkingHoursThisMonth
-					</form:label></td>
-					<td><form:input path="workingHoursThisMonth" /></td>
-				</tr>
-                <tr>
-                    <td><form:label path="driverStatus"> DriverStatus
-                    </form:label></td>
-                    <td><form:input path="driverStatus" /></td>
-                </tr>
-				<tr>
-					<td colspan="2"><input type="submit" value="Add Driver"/></td>
-				</tr>
-			</table>
-		</form:form></th>--%>
-
 <h4>&nbsp&nbsp&nbspDrivers List</h4>
-
 
 <c:if test="${!empty driverList}">
 	<table class="data">
