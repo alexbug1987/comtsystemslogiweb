@@ -13,7 +13,7 @@
 <body>
 <jsp:include page="fragments/header.jsp" />
 
-<h4>&nbsp&nbsp&nbspDrivers List</h4>
+<h4>&nbsp&nbsp&nbsp&nbsp&nbspDrivers List</h4>
 
 <c:if test="${!empty driverList}">
 	<table class="data">
@@ -24,7 +24,7 @@
 			<th>PersonalNumber</th>
 			<th>WorkingHoursThisMonth</th>
             <th>Status</th>
-            <th>City</th>
+          <%--  <th>City</th>--%>
             <th></th>
 		</tr>
 		<c:forEach items="${driverList}" var="driver">
@@ -35,7 +35,7 @@
 				<td>${driver.personalNumber}</td>
 				<td>${driver.workingHoursThisMonth}</td>
                 <td>${driver.driverStatus}</td>
-                <td>${driver.driverCountry.city}</td>
+               <%-- <td>${driver.driverCountry.city}</td>--%>
 				<%--<td><a href="delete/${driver.driverId}">Delete</a></td>--%>
                 <td>
                     <spring:url value="/welcome/${driver.driverId}" var="detailUrl" />

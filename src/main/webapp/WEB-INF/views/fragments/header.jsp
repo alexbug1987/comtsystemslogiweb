@@ -26,22 +26,22 @@
         </div>
         <div id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="${urlAddDriver}">&nbsp;&nbsp;Add Driver</a></li>
+				<li class="active"><a href="${urlAddDriver}">&nbsp;&nbsp;+Driver</a></li>
 			</ul>
 		</div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddTruck}">&nbsp;&nbsp;Add Truck</a></li>
+                <li class="active"><a href="${urlAddTruck}">&nbsp;&nbsp;+Truck</a></li>
             </ul>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddOrder}">&nbsp;&nbsp;Add Order</a></li>
+                <li class="active"><a href="${urlAddOrder}">&nbsp;&nbsp;+Order</a></li>
             </ul>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddCity}">&nbsp;&nbsp;Add City</a></li>
+                <li class="active"><a href="${urlAddCity}">&nbsp;&nbsp;+City</a></li>
             </ul>
         </div>
 	</div>

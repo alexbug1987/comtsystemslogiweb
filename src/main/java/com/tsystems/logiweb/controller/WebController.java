@@ -26,7 +26,6 @@ public class WebController {
     @RequestMapping("/welcome")
     public String listDriver(Map<String, Object> map) {
 
-        map.put("driver", new Driver());
         map.put("driverList", driverService.getAll());
         logger.debug("listDriver()");
         return "driver";
