@@ -23,7 +23,7 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/welcome"};
+        return new String[] {"/"};
     }
 /*public class AppInitializer implements WebApplicationInitializer {
 

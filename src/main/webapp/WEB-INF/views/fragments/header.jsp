@@ -8,11 +8,11 @@
 <link href="${bootstrapCss}" rel="stylesheet" />
 </head>
 
-<spring:url value="/welcome" var="urlHome" />
-<spring:url value="/welcome/adddriver" var="urlAddDriver" />
-<spring:url value="/welcome/addtruck" var="urlAddTruck" />
-<spring:url value="/welcome/addorder" var="urlAddOrder" />
-<spring:url value="/welcome/addcity" var="urlAddCity" />
+<spring:url value="/" var="urlHome" />
+<spring:url value="/adddriver" var="urlAddDriver" />
+<spring:url value="/addtruck" var="urlAddTruck" />
+<spring:url value="/addorder" var="urlAddOrder" />
+<spring:url value="/addcity" var="urlAddCity" />
 
 <nav class="navbar navbar-inverse ">
 	<div class="container">
