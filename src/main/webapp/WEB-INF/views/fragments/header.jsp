@@ -4,10 +4,8 @@
 <head>
 <title>Tsystems LogiWeb </title>
 
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
+<spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss" />
 <link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
 </head>
 
 <spring:url value="/welcome" var="urlHome" />
@@ -23,27 +21,27 @@
 		</div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="<c:url value="/logout" />">LOGOUT</a></li>
+                <li class="active"><a href="<c:url value="/logout" />">&nbsp;&nbsp;LOGOUT</a></li>
             </ul>
         </div>
         <div id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="${urlAddDriver}">Add Driver</a></li>
+				<li class="active"><a href="${urlAddDriver}">&nbsp;&nbsp;Add Driver</a></li>
 			</ul>
 		</div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddTruck}">Add Truck</a></li>
+                <li class="active"><a href="${urlAddTruck}">&nbsp;&nbsp;Add Truck</a></li>
             </ul>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddOrder}">Add Order</a></li>
+                <li class="active"><a href="${urlAddOrder}">&nbsp;&nbsp;Add Order</a></li>
             </ul>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="${urlAddCity}">Add City</a></li>
+                <li class="active"><a href="${urlAddCity}">&nbsp;&nbsp;Add City</a></li>
             </ul>
         </div>
 	</div>

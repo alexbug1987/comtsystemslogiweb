@@ -36,7 +36,7 @@ public class WebController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/welcome/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/welcome/adddriver", method = RequestMethod.POST)
     public String addDriver(@ModelAttribute("driver") Driver driver, BindingResult result) {
 
         driverService.addDriver(driver);
@@ -44,7 +44,7 @@ public class WebController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping("/delete/{driverId}")
+    @RequestMapping("/welcome/delete/{driverId}")
     public String deleteDriver(@PathVariable("driverId") Integer driverId) {
 
         driverService.delete(driverId);

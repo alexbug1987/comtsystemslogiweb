@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
-	<link rel="stylesheet" type="text/css" href="../../resources/styleList.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/styleList.css">
 	<title>Tsystems Logiweb</title>
 </head>
 <body>
@@ -49,24 +49,24 @@
 			</table>
 		</form:form></th>--%>
 
-<h4>Drivers List</h4>
+<h4>&nbsp&nbsp&nbspDrivers List</h4>
 
 
 <c:if test="${!empty driverList}">
 	<table class="data">
 		<tr class="simple">
-            <th>&nbsp;</th>
+            <th>&nbsp&nbsp&nbsp</th>
 			<th>Name</th>
 			<th>Sirname</th>
 			<th>PersonalNumber</th>
 			<th>WorkingHoursThisMonth</th>
             <th>Status</th>
             <th>City</th>
-			<th>&nbsp;</th>
+            <th></th>
 		</tr>
 		<c:forEach items="${driverList}" var="driver">
 			<tr class="simple">
-                <th>&nbsp;</th>
+                <td></td>
 				<td>${driver.name}</td>
 				<td>${driver.sirname}</td>
 				<td>${driver.personalNumber}</td>
@@ -75,13 +75,13 @@
                 <td>${driver.driverCountry.city}</td>
 				<%--<td><a href="delete/${driver.driverId}">Delete</a></td>--%>
                 <td>
-                    <spring:url value="/welcome/${driver.driverId}" var="driverDetails" />
-                    <spring:url value="/welcome/delete/${driver.driverId}" var="deleteDriver" />
-                    <spring:url value="/welcome/update/${driver.driverId}" var="updateDriver" />
+                    <spring:url value="/welcome/${driver.driverId}" var="detailUrl" />
+                    <spring:url value="/welcome/delete/${driver.driverId}" var="deleteUrl" />
+                    <spring:url value="/welcome/update/${driver.driverId}" var="updateUrl" />
 
-                    <button class="btn btn-info" onclick="location.href='${driverDetails}'">Details</button>
-                    <button class="btn btn-primary" onclick="location.href='${updateDriver}'">Update</button>
-                    <button class="btn btn-danger" onclick="this.disabled=true;post('${deleteDriver}')">Delete</button></td>
+                    <button class="btn btn-info" onclick="location.href='${detailUrl}'">Details</button>
+                    <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Update</button>
+                    <button class="btn btn-danger" onclick="this.disabled=true;post('${deleteUrl}')">Delete</button></td>
 			</tr>
 		</c:forEach>
 	</table>
