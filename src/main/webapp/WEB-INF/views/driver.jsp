@@ -7,13 +7,14 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
-	<link rel="stylesheet" type="text/css" href="../../resources/styleContact.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/styleList.css">
 	<title>Tsystems Logiweb</title>
 </head>
 <body>
+<jsp:include page="fragments/header.jsp" />
 
-<a href="<c:url value="/logout" />">LOGOUT </a>
-<h2>Add Driver</h2>
+
+<%--<h2>Add Driver</h2>
 
 	<th><form:form method="post" action="add" modelAttribute="driver">
 			<table>
@@ -46,12 +47,15 @@
 					<td colspan="2"><input type="submit" value="Add Driver"/></td>
 				</tr>
 			</table>
-		</form:form></th>
+		</form:form></th>--%>
 
-<h3>Drivers List</h3>
+<h4>Drivers List</h4>
+
+
 <c:if test="${!empty driverList}">
 	<table class="data">
 		<tr class="simple">
+            <th>&nbsp;</th>
 			<th>Name</th>
 			<th>Sirname</th>
 			<th>PersonalNumber</th>
@@ -62,17 +66,28 @@
 		</tr>
 		<c:forEach items="${driverList}" var="driver">
 			<tr class="simple">
+                <th>&nbsp;</th>
 				<td>${driver.name}</td>
 				<td>${driver.sirname}</td>
 				<td>${driver.personalNumber}</td>
 				<td>${driver.workingHoursThisMonth}</td>
                 <td>${driver.driverStatus}</td>
                 <td>${driver.driverCountry.city}</td>
-				<td><a href="welcome/delete/${driver.driverId}">Delete</a></td>
+				<%--<td><a href="delete/${driver.driverId}">Delete</a></td>--%>
+                <td>
+                    <spring:url value="/welcome/${driver.driverId}" var="driverDetails" />
+                    <spring:url value="/welcome/delete/${driver.driverId}" var="deleteDriver" />
+                    <spring:url value="/welcome/update/${driver.driverId}" var="updateDriver" />
+
+                    <button class="btn btn-info" onclick="location.href='${driverDetails}'">Details</button>
+                    <button class="btn btn-primary" onclick="location.href='${updateDriver}'">Update</button>
+                    <button class="btn btn-danger" onclick="this.disabled=true;post('${deleteDriver}')">Delete</button></td>
 			</tr>
 		</c:forEach>
 	</table>
 </c:if>
 <%--<script src="../../resources/jquery-3.3.1.js"></script>--%>
+
+<jsp:include page="fragments/footer.jsp" />
 </body>
 </html>

@@ -2,8 +2,8 @@
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     background: white;
-    max-width: 90%;
-    width: 90%;
+    max-width: 100%;
+    width: 100%;
     border-collapse: collapse;
     text-align: left;
 }
@@ -24,7 +24,7 @@ td {
     padding: 8px;
 }
 .simple:hover td {
-    background: #ff1010;
+    background: #12ffa4;
     color: #000000;
 }
 
@@ -36,6 +36,14 @@ form{
     width: 20%;
     border-collapse: collapse;
     text-align: left;
+}
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: magenta; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
 }
 
 

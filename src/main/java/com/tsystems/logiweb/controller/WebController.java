@@ -36,7 +36,7 @@ public class WebController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/welcome/add", method = RequestMethod.POST)
     public String addDriver(@ModelAttribute("driver") Driver driver, BindingResult result) {
 
         driverService.addDriver(driver);
