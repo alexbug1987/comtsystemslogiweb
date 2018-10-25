@@ -49,7 +49,6 @@
 		</c:forEach>
 	</table>
 </c:if>
-<%--<script src="../../resources/jquery-3.3.1.js"></script>--%>
 
 <jsp:include page="fragments/footer.jsp" />
 </body>
