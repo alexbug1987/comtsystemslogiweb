@@ -12,7 +12,6 @@
 <body>
 <jsp:include page="fragments/header.jsp" />
 
-
 <form:form method="post" action="adddriver" modelAttribute="addDriver">
 
 	<table>

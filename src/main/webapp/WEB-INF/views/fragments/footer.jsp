@@ -9,7 +9,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%--<script src="../../resources/jquery-3.3.1.js"></script>--%>
 
-
 <spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJs" />
 
 <script src="${bootstrapJs}"></script>
