@@ -36,13 +36,13 @@ public class WebController {
         return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/welcome/adddriver", method = RequestMethod.POST)
-    public String addDriver(@ModelAttribute("adddriver") Driver driver, BindingResult result) {
-
+/*    @RequestMapping(value = "/adddriver", method = RequestMethod.GET)
+    public String addDriver(@ModelAttribute("addDriver") Driver driver,
+                             BindingResult result) {
         driverService.addDriver(driver);
-        logger.debug("addDriver(driver)");
+
         return "redirect:/welcome";
-    }
+    }*/
 
     @RequestMapping(value = "/welcome/delete/{driverId}", method = RequestMethod.GET)
     public String deleteDriver(@PathVariable("driverId") Integer driverId) {

@@ -27,7 +27,8 @@ public class Driver {
     @Column(name = "WorkingHoursThisMonth", nullable = false)
     private short workingHoursThisMonth;
 
-    @Column(name = "DriverStatus", nullable = false)
+    //@Column(name = "DriverStatus", nullable = false)
+    @Column(name = "DriverStatus")
     @Enumerated(EnumType.STRING)
     private DriverStatus driverStatus;
 
