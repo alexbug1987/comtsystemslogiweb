@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<body>
 <jsp:include page="fragments/header.jsp" />
 
 <div class="container">
